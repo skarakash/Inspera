@@ -1,0 +1,23 @@
+$media720px: 720px; /* smartphones breakpoint */
+
+body {
+    background: #eee;
+}
+
+article {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+}
+
+@media (max-width: $media720px){ 
+    h1 {
+        font-size: 26px
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
