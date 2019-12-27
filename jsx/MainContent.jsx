@@ -1,13 +1,12 @@
 var React = require('react'),
-    createReactClass = require('create-react-class'),
-    PropTypes = require('prop-types');
+    createReactClass = require('create-react-class');
 
 
 var MainContent = createReactClass({
     render: function() {
         return (
             <article className="frontpage-article">
-                <h1>Lorem ipsum dolor</h1>
+                <h1>Lorem ipsum dolor!</h1>
                 <p>sit amet, consectetur adipiscing elit. Ut euismod metus ut hendrerit tincidunt. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras mauris ex, suscipit a mi ac, cursus tempus dolor. Vivamus sed eleifend turpis. Suspendisse congue quis ligula at condimentum. Aenean cursus cursus urna eget lobortis. Morbi sagittis dolor magna, vitae blandit ex cursus eget. Suspendisse nec auctor nunc. Nulla sit amet laoreet quam, eget ultrices metus.</p>
 
                 <h2>Morbi at tincidunt diam.</h2>

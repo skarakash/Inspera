@@ -4,6 +4,8 @@ const nodemon = require('gulp-nodemon');
 const plumber = require('gulp-plumber');
 const react = require('gulp-react');
 const sass = require("gulp-sass");
+const jest = require('gulp-jest').default;
+
 
 
 function server(cb) {
@@ -33,11 +35,19 @@ function styles() {
 }; 
 
 
+function test(){
+  return gulp.src('./__tests__').pipe(
+    jest({
+    "preprocessorIgnorePatterns": ["./node_modules/" ],
+    "automock": false
+  })
+  );
+}
+
 gulp.task('default', gulp.series([server], (done) => {
-	watch('./jsx/**/*.jsx', jsx);
+  watch('./jsx/**/*.jsx', gulp.series(jsx, test));
 	watch('./css/base.scss', styles);
 	done()
 }));
 
-
-exports.jsx = jsx;
+exports.test = test;
